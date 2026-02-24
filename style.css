@@ -1,0 +1,140 @@
+/* =========================
+   БАЗА
+========================= */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #f5f7fa, #e4ecf7);
+    color: #222;
+}
+
+header, footer {
+    background-color: #002b5c;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* =========================
+   FLEXBOX
+========================= */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* псевдокласс */
+nav a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* =========================
+   КЛАССЫ
+========================= */
+
+.section-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.highlight {
+    color: darkred !important; /* модификатор */
+    font-weight: bold;
+}
+
+/* =========================
+   ID селектор
+========================= */
+
+#main-title {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   СПИСКИ
+========================= */
+
+ul li {
+    padding: 5px;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+/* псевдоэлемент */
+ul li::before {
+    content: "✔ ";
+    color: green;
+}
+
+/* =========================
+   АТРИБУТНЫЙ СЕЛЕКТОР
+========================= */
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   КОМБИНАЦИЯ СЕЛЕКТОРОВ
+========================= */
+
+section.section-card h2 {
+    border-bottom: 2px solid #002b5c;
+    padding-bottom: 5px;
+}
+
+/* =========================
+   POSITION
+========================= */
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   MEDIA QUERY
+========================= */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-title {
+        font-size: 24px;
+    }
+}
