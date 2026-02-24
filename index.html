@@ -7,14 +7,31 @@
     <meta name="keywords" content="ВШЭ, студент, прикладная математика, HSE, портфолио">
     <meta name="author" content="Арсений Карпов">
     <title>Я - студент ВШЭ</title>
+
+    <!-- Подключение внешнего CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Внутренние стили -->
+    <style>
+        aside {
+            background-color: #eef3f9;
+            padding: 15px;
+            border-left: 5px solid #002b5c;
+        }
+
+        figure img {
+            border-radius: 12px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Я — студент ВШЭ</h1>
+    <h1 id="main-title">Я — студент ВШЭ</h1>
+
     <nav>
-        <ul>
+        <ul class="nav-list">
             <li><a href="index.html">Главная</a></li>
             <li><a href="feedback.html">Обратная связь</a></li>
         </ul>
@@ -23,57 +40,63 @@
 
 <main>
 
-    <section>
+    <section class="section-card">
         <article>
             <h2>Обо мне</h2>
+
             <figure>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/HSE_Logo.svg/512px-HSE_Logo.svg.png" 
-                     alt="Логотип НИУ ВШЭ" width="200">
+                     alt="Логотип НИУ ВШЭ"
+                     width="200"
+                     style="box-shadow: 0 4px 10px rgba(0,0,0,0.2);"> <!-- inline стиль -->
+
                 <figcaption>Национальный исследовательский университет «Высшая школа экономики»</figcaption>
             </figure>
 
             <p>
-                Меня зовут <strong>Арсений Карпов</strong>. Я обучаюсь в 
+                Меня зовут <strong class="highlight">Арсений Карпов</strong>. Я обучаюсь в 
                 <em>НИУ ВШЭ</em> на направлении <mark>Прикладная математика</mark>, 4 курс.
             </p>
 
             <p>
-                Также обучался на майноре <abbr title="Бизнес-информатика">БИ</abbr>.
-                Интересуюсь <span>моделированием подключенного и беспилотного транспорта</span>, 
+                Также обучался на майноре 
+                <abbr title="Бизнес-информатика">БИ</abbr>.
+                Интересуюсь 
+                <span class="accent-text">моделированием подключенного и беспилотного транспорта</span>, 
                 <cite>интеллектуальными транспортными системами</cite> и машинным обучением.
             </p>
         </article>
     </section>
 
-    <section>
+    <section class="section-card">
         <h2>Образование</h2>
-        <ul>
-            <li>НИУ ВШЭ — Прикладная математика (Москва) 2022 г. -наст. вр.</li>
-            <li>НИУ ВШЭ — Майнор «Бизнес-информатика» 2023-2025 гг. </li>
+        <ul class="education-list">
+            <li>НИУ ВШЭ — Прикладная математика (Москва) 2022 г. - наст. вр.</li>
+            <li>НИУ ВШЭ — Майнор «Бизнес-информатика» 2023-2025 гг.</li>
         </ul>
     </section>
 
-    <section>
+    <section class="section-card">
         <h2>Опыт работы</h2>
 
-        <article>
+        <article class="job-card">
             <h3>IT Project Manager — CAVISE</h3>
             <time datetime="2024">2024</time> — <time datetime="2026">н.в.</time>
         </article>
 
-        <article>
+        <article class="job-card">
             <h3>Лаборант-исследователь — Университет Сириус</h3>
-            <p>Центр социально-экономического прогнозирования. 2025 г. - наст.вр. </p>
+            <p>Центр социально-экономического прогнозирования. 2025 г. - наст.вр.</p>
         </article>
 
-        <article>
+        <article class="job-card">
             <h3>Производственная практика</h3>
             <p>Создание ИИ-ассистента на основе RAG и LLM для компании «Скала-Р». 2025 г.</p>
         </article>
 
     </section>
 
-    <section>
+    <section class="section-card">
         <h2>Навыки</h2>
 
         <h3>Языки программирования</h3>
@@ -113,9 +136,12 @@
 
 </main>
 
-<footer>
+<footer style="text-align: center;"> <!-- inline стиль -->
     <p>&copy; 2026 Арсений Карпов | НИУ ВШЭ</p>
 </footer>
+
+<!-- Кнопка наверх (position fixed) -->
+<a href="#main-title" class="fixed-button">Наверх ↑</a>
 
 </body>
 </html>
