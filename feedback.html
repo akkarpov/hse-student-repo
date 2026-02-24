@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Форма обратной связи</h1>
+    <h1 id="main-title">Форма обратной связи</h1>
     <nav>
         <ul>
             <li><a href="index.html">Главная</a></li>
@@ -19,56 +28,21 @@
 
 <main>
 
-<section>
+<section class="section-card">
     <h2>Свяжитесь со мной</h2>
 
-    <form action="#" method="post">
+    <form>
+        <label>Имя:</label>
+        <input type="text" required>
 
-        <fieldset>
-            <legend>Контактная информация</legend>
+        <label>Email:</label>
+        <input type="email" required>
 
-            <label for="name">Имя:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+        <label>Сообщение:</label>
+        <textarea rows="5"></textarea>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="phone">Телефон:</label><br>
-            <input type="tel" id="phone" name="phone"><br><br>
-
-        </fieldset>
-
-        <fieldset>
-            <legend>Сообщение</legend>
-
-            <label for="topic">Тема обращения:</label><br>
-            <select id="topic" name="topic">
-                <option value="project">Проект</option>
-                <option value="collaboration">Сотрудничество</option>
-                <option value="research">Научная работа</option>
-                <option value="other">Другое</option>
-            </select><br><br>
-
-            <label>Формат ответа:</label><br>
-            <input type="radio" name="reply" value="email" checked> Email<br>
-            <input type="radio" name="reply" value="phone"> Телефон<br><br>
-
-            <label>Интересующие направления:</label><br>
-            <input type="checkbox" name="interest" value="ml"> ML<br>
-            <input type="checkbox" name="interest" value="transport"> ИТС<br>
-            <input type="checkbox" name="interest" value="web"> Web-разработка<br><br>
-
-            <label for="message">Ваше сообщение:</label><br>
-            <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
-
-            <label for="file">Прикрепить файл:</label><br>
-            <input type="file" id="file" name="file"><br><br>
-
-            <input type="submit" value="Отправить">
-            <input type="reset" value="Очистить">
-
-        </fieldset>
-
+        <br><br>
+        <input type="submit" value="Отправить" style="background:green; color:white;">
     </form>
 
 </section>
@@ -76,7 +50,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2026 Арсений Карпов | НИУ ВШЭ</p>
+    <p>&copy; 2026 Арсений Карпов</p>
 </footer>
 
 </body>
