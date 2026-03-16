@@ -1,140 +1,340 @@
-/* =========================
-   БАЗА
-========================= */
-
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(to right, #f5f7fa, #e4ecf7);
-    color: #222;
+:root {
+  --bg: #f4f7fb;
+  --bg-soft: #e9f0fb;
+  --text: #1f2a37;
+  --accent: #0c4da2;
+  --accent-dark: #002b5c;
+  --accent-light: #dce9ff;
+  --white: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 43, 92, 0.1);
+  --border: #d6deeb;
+  --success: #2e8b57;
 }
 
-header, footer {
-    background-color: #002b5c;
-    color: white;
-    padding: 20px;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg), var(--bg-soft));
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+header,
+footer {
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  color: var(--white);
+}
+
+header {
+  padding: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 main {
-    padding: 20px;
+  padding: 28px 0 96px;
 }
 
-/* =========================
-   FLEXBOX
-========================= */
-
 nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
 }
 
-/* псевдокласс */
-nav a:hover {
-    color: #ffcc00;
-    text-decoration: underline;
+nav a:hover,
+nav a:focus {
+  color: #ffdd57;
+  text-decoration: underline;
 }
 
-/* =========================
-   КЛАССЫ
-========================= */
+#main-title {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
 
 .section-card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: var(--white);
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.section-card h2 {
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-dark);
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-logo {
+  background: #f8fbff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.hero-logo img {
+  max-height: 120px;
+  margin: 0 auto 12px;
 }
 
 .highlight {
-    color: darkred !important; /* модификатор */
-    font-weight: bold;
+  color: #b42318;
+  font-weight: 700;
 }
 
-/* =========================
-   ID селектор
-========================= */
-
-#main-title {
-    text-align: center;
-    font-size: 36px;
-    letter-spacing: 2px;
+.skills-grid,
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
-/* =========================
-   СПИСКИ
-========================= */
-
-ul li {
-    padding: 5px;
-}
-
+ul,
 ol {
-    list-style-type: upper-roman;
+  padding-left: 22px;
 }
 
-/* псевдоэлемент */
-ul li::before {
-    content: "✔ ";
-    color: green;
+ul li,
+ol li {
+  margin-bottom: 8px;
 }
 
-/* =========================
-   АТРИБУТНЫЙ СЕЛЕКТОР
-========================= */
+.experience-item + .experience-item {
+  margin-top: 16px;
+}
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font: inherit;
 }
 
-/* =========================
-   КОМБИНАЦИЯ СЕЛЕКТОРОВ
-========================= */
-
-section.section-card h2 {
-    border-bottom: 2px solid #002b5c;
-    padding-bottom: 5px;
+textarea {
+  resize: vertical;
 }
 
-/* =========================
-   POSITION
-========================= */
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--white);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover,
+button:focus {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.section-note,
+.form-note,
+.voice-status,
+.chat-header p {
+  color: #5b6675;
+}
+
+.map {
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.chat-widget {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f8fbff;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  background: var(--accent-light);
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-header strong {
+  display: block;
+}
+
+.chat-header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.15);
+}
+
+.chat-messages {
+  height: 340px;
+  overflow-y: auto;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 78%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--white);
+  border-bottom-right-radius: 6px;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 6px;
+}
+
+.message small {
+  display: block;
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+.audio-message {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 0 18px 18px;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 18px 18px;
+  flex-wrap: wrap;
+}
+
+.feedback-form {
+  display: grid;
+  gap: 12px;
+}
+
+.footer-content {
+  padding: 24px 0;
+}
 
 .fixed-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ffcc00;
-    padding: 10px 15px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #ffcc00;
+  color: #1b1b1b;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-/* =========================
-   MEDIA QUERY
-========================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav ul,
+  .skills-grid,
+  .contacts-grid,
+  .hero-card,
+  .chat-form {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
 
-    #main-title {
-        font-size: 24px;
-    }
+  nav ul {
+    align-items: center;
+  }
+
+  #main-title {
+    font-size: 28px;
+  }
+
+  .chat-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  .map {
+    height: 320px;
+  }
 }

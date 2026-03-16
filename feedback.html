@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Обратная связь</title>
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обратная связь</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <h1 id="main-title">Форма обратной связи</h1>
-    <nav>
+  <header>
+    <div class="container">
+      <h1 id="main-title">Форма обратной связи</h1>
+      <nav>
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="feedback.html">Обратная связь</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="feedback.html">Обратная связь</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<main>
+  <main class="container">
+    <section class="section-card">
+      <h2>Свяжитесь со мной</h2>
+      <form class="feedback-form">
+        <label for="name">Имя</label>
+        <input id="name" type="text" placeholder="Ваше имя">
 
-<section class="section-card">
-    <h2>Свяжитесь со мной</h2>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="example@mail.ru">
 
-    <form>
-        <label>Имя:</label>
-        <input type="text" required>
+        <label for="message">Сообщение</label>
+        <textarea id="message" rows="7" placeholder="Ваше сообщение"></textarea>
 
-        <label>Email:</label>
-        <input type="email" required>
+        <button type="submit">Отправить</button>
+        <p class="form-note">Форма демонстрационная и не отправляет данные на сервер.</p>
+      </form>
+    </section>
+  </main>
 
-        <label>Сообщение:</label>
-        <textarea rows="5"></textarea>
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Арсений Карпов</p>
+      <a class="fixed-button" href="#main-title">Наверх ↑</a>
+    </div>
+  </footer>
 
-        <br><br>
-        <input type="submit" value="Отправить" style="background:green; color:white;">
-    </form>
-
-</section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Арсений Карпов</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

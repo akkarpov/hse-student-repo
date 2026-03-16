@@ -1,147 +1,152 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Я - студент ВШЭ. Портфолио Арсения Карпова">
-    <meta name="keywords" content="ВШЭ, студент, прикладная математика, HSE, портфолио">
-    <meta name="author" content="Арсений Карпов">
-    <title>Я - студент ВШЭ</title>
-
-    <!-- Подключение внешнего CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Внутренние стили -->
-    <style>
-        aside {
-            background-color: #eef3f9;
-            padding: 15px;
-            border-left: 5px solid #002b5c;
-        }
-
-        figure img {
-            border-radius: 12px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Я — студент ВШЭ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
 </head>
-
 <body>
-
-<header>
-    <h1 id="main-title">Я — студент ВШЭ</h1>
-
-    <nav>
-        <ul class="nav-list">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="feedback.html">Обратная связь</a></li>
+  <header>
+    <div class="container">
+      <h1 id="main-title">Я — студент ВШЭ</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="feedback.html">Обратная связь</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<main>
-
-    <section class="section-card">
-        <article>
-            <h2>Обо мне</h2>
-
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/HSE_Logo.svg/512px-HSE_Logo.svg.png" 
-                     alt="Логотип НИУ ВШЭ"
-                     width="200"
-                     style="box-shadow: 0 4px 10px rgba(0,0,0,0.2);"> <!-- inline стиль -->
-
-                <figcaption>Национальный исследовательский университет «Высшая школа экономики»</figcaption>
-            </figure>
-
-            <p>
-                Меня зовут <strong class="highlight">Арсений Карпов</strong>. Я обучаюсь в 
-                <em>НИУ ВШЭ</em> на направлении <mark>Прикладная математика</mark>, 4 курс.
-            </p>
-
-            <p>
-                Также обучался на майноре 
-                <abbr title="Бизнес-информатика">БИ</abbr>.
-                Интересуюсь 
-                <span class="accent-text">моделированием подключенного и беспилотного транспорта</span>, 
-                <cite>интеллектуальными транспортными системами</cite> и машинным обучением.
-            </p>
-        </article>
+  <main class="container">
+    <section class="section-card hero-card">
+      <div class="hero-text">
+        <h2>Обо мне</h2>
+        <p>
+          Меня зовут <span class="highlight">Арсений Карпов</span>. Я обучаюсь в НИУ ВШЭ на направлении
+          <strong>«Прикладная математика»</strong>, 4 курс.
+        </p>
+        <p>
+          Также обучался на майноре БИ. Интересуюсь моделированием подключенного и беспилотного транспорта,
+          интеллектуальными транспортными системами и машинным обучением.
+        </p>
+      </div>
+      <div class="hero-logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/06/HSE_University_logo_rus.svg"
+          alt="Логотип НИУ ВШЭ"
+        >
+        <p>Национальный исследовательский университет «Высшая школа экономики»</p>
+      </div>
     </section>
 
     <section class="section-card">
-        <h2>Образование</h2>
-        <ul class="education-list">
-            <li>НИУ ВШЭ — Прикладная математика (Москва) 2022 г. - наст. вр.</li>
-            <li>НИУ ВШЭ — Майнор «Бизнес-информатика» 2023-2025 гг.</li>
-        </ul>
+      <h2>Образование</h2>
+      <ul>
+        <li>НИУ ВШЭ — Прикладная математика (Москва), 2022 г. — наст. вр.</li>
+        <li>НИУ ВШЭ — Майнор «Бизнес-информатика», 2023–2025 гг.</li>
+      </ul>
     </section>
 
     <section class="section-card">
-        <h2>Опыт работы</h2>
-
-        <article class="job-card">
-            <h3>IT Project Manager — CAVISE</h3>
-            <time datetime="2024">2024</time> — <time datetime="2026">н.в.</time>
-        </article>
-
-        <article class="job-card">
-            <h3>Лаборант-исследователь — Университет Сириус</h3>
-            <p>Центр социально-экономического прогнозирования. 2025 г. - наст.вр.</p>
-        </article>
-
-        <article class="job-card">
-            <h3>Производственная практика</h3>
-            <p>Создание ИИ-ассистента на основе RAG и LLM для компании «Скала-Р». 2025 г.</p>
-        </article>
-
+      <h2>Опыт работы</h2>
+      <article class="experience-item">
+        <h3>Transport modelling  — CAVISE</h3>
+        <p>2024 — н.в.</p>
+      <article class="experience-item">
+        <h3>IT Project Manager — CAVISE</h3>
+        <p>2024 — н.в.</p>
+      </article>
+      <article class="experience-item">
+        <h3>Лаборант-исследователь — Университет Сириус</h3>
+        <p>Центр социально-экономического прогнозирования. 2025 г. — наст. вр.</p>
+      </article>
+      <article class="experience-item">
+        <h3>Производственная практика</h3>
+        <p>Создание ИИ-ассистента на основе RAG и LLM для компании «Скала-Р». 2025 г.</p>
+      </article>
     </section>
 
     <section class="section-card">
-        <h2>Навыки</h2>
-
-        <h3>Языки программирования</h3>
-        <ol>
+      <h2>Навыки</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Языки программирования</h3>
+          <ol>
             <li>Python</li>
             <li>C / C++</li>
             <li>HTML / CSS</li>
             <li>JavaScript</li>
             <li>Java</li>
-        </ol>
-
-        <h3>Инструменты</h3>
-        <p>
-            Git, GitHub, Docker, PostgreSQL, LaTeX, Ubuntu, PyCharm,
-            Jupyter Notebook, DBeaver.
-        </p>
-
-        <details>
-            <summary>Дополнительные компетенции</summary>
-            <p>
-                Численные методы (SVD, PCA), методы оптимизации, 
-                машинное обучение (градиентный бустинг, случайный лес),
-                PyTorch.
-            </p>
-        </details>
-
+          </ol>
+        </div>
+        <div>
+          <h3>Инструменты</h3>
+          <p>Git, GitHub, Docker, PostgreSQL, LaTeX, Ubuntu, PyCharm, Jupyter Notebook, DBeaver.</p>
+          <h3>Дополнительные компетенции</h3>
+          <p>Численные методы (SVD, PCA), методы оптимизации, машинное обучение, PyTorch.</p>
+        </div>
+      </div>
     </section>
 
-    <aside>
-        <h3>Контакты</h3>
-        <address>
-            Телефон: <a href="tel:+79259884043">+7 (925) 988-40-43</a><br>
-            Email: <a href="mailto:arseniy.0507@mail.ru">arseniy.0507@mail.ru</a><br>
-            Telegram: <a href="https://t.me/krokodilchik13" target="_blank">@krokodilchik13</a>
-        </address>
-    </aside>
+    <section class="section-card">
+      <h2>Интерактивная карта</h2>
+      <p class="section-note">
+        На карте отмечен НИУ ВШЭ в Москве. Можно приближать, отдалять и перемещать карту.
+      </p>
+      <div id="map" class="map"></div>
+    </section>
 
-</main>
+    <section class="section-card">
+      <h2>Виртуальный чат с автором</h2>
+      <p class="section-note">
+        Чат работает только на странице: сообщения никуда не отправляются. Доступна отправка текста и голосовых сообщений.
+      </p>
 
-<footer style="text-align: center;"> <!-- inline стиль -->
-    <p>&copy; 2026 Арсений Карпов | НИУ ВШЭ</p>
-</footer>
+      <div class="chat-widget">
+        <div class="chat-header">
+          <div>
+            <strong>Арсений онлайн</strong>
+            <p>Фиктивный ассистент страницы</p>
+          </div>
+          <span class="status-dot"></span>
+        </div>
 
-<!-- Кнопка наверх (position fixed) -->
-<a href="#main-title" class="fixed-button">Наверх ↑</a>
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
 
+        <form id="chat-form" class="chat-form">
+          <label class="sr-only" for="chat-input">Введите сообщение</label>
+          <input id="chat-input" type="text" placeholder="Напишите сообщение..." maxlength="300">
+          <button type="submit">Отправить</button>
+        </form>
+
+        <div class="chat-actions">
+          <button id="voice-button" type="button">🎙️ Записать голосовое</button>
+          <span id="voice-status" class="voice-status">Нажмите, чтобы начать запись</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Контакты</h2>
+      <div class="contacts-grid">
+        <p><strong>Телефон:</strong> <a href="tel:+79259884043">+7 (925) 988-40-43</a></p>
+        <p><strong>Email:</strong> <a href="mailto:arseniy.0507@mail.ru">arseniy.0507@mail.ru</a></p>
+        <p><strong>Telegram:</strong> <a href="https://t.me/krokodilchik13" target="_blank" rel="noopener noreferrer">@krokodilchik13</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Арсений Карпов | НИУ ВШЭ</p>
+      <a class="fixed-button" href="#main-title">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
